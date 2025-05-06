@@ -1,70 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Genshin - Accueil</title>
-   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
- 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Genshin - Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 <style>
-  body {
-    color: purple;
-    font-family: 'UnifrakturCook', cursive;
-    background-image: url('Porte nuit genshin.png');
-    background-size: cover;
+    body {
+        color: purple;
+        font-family: 'UnifrakturCook', cursive;
+        /*background-image: url('Porte nuit genshin.png');*/
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        a {
+            color: purple;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-    a {
-  color: purple;
-  text-decoration: none;
-  transition: 0.3s;  
-}
-a:hover { 
-  color: pink;
-  text-shadow: 0 0 10px purple;
-}
-  }
+        a:hover {
+            color: pink;
+            text-shadow: 0 0 10px purple;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
 </style>
-  
 
-<body> 
-  <h1>Bienvenue sur mon site qui presente le manifique jeu Gensin Impact</h1>
-  <p>
+
+<body>
+<h1>Bienvenue sur mon site qui presente le manifique jeu Gensin Impact</h1>
+<p>
     Explorez les différentes pages:
-  nous allons faire les pzges quand nous ferons tout en papier pour savoir exactement que faire, 
-pour aujoud-hui nous avons préparé le contenu de chaque page, nous allons faire des eventuelles modifications lors de la mise en commun et commencerons faire les page, en se les partageant.
- </p>
-  
+    nous allons faire les pzges quand nous ferons tout en papier pour savoir exactement que faire,
+    pour aujoud-hui nous avons préparé le contenu de chaque page, nous allons faire des eventuelles modifications lors
+    de la mise en commun et commencerons faire les page, en se les partageant.
+</p>
 
-  
-  <ul>
+
+<ul>
     <li><a href="page1.html">Les regions</a></li>
     <li><a href="page2.html">Les Personnages</a></li>
     <li><a href="page3.html">Les visions</a></li>
-  </ul>
-  
- <img id='idimg' src="Portesoir.jpg">
- <img id='idimg' src="Portejour.jpg">
- <img id='idimg' src="Porte nuit genshinr.jpg">
+</ul>
+
+<img src="Portesoir.png">
+<img src="Portejour.png">
+<img src="Porte nuit genshin.png">
 
 </body>
 
 
- <script>
+<script>
     const hour = new Date().getHours();
-    const img = document.getElementById('idimg');
-    if (hour >= 6 && hour < 12) {
+    let imageName = '';
+
+    if (hour >= 8 && hour <= 22) {
         imageName = 'Portejour.png';
-    } else if (hour >= 12 && hour < 18) {
-        imageName = 'Portesoir.png';
-    } else if (hour >= 18 && hour < 22) {
-        imageName = 'Portesoir.png';
     } else {
         imageName = 'Porte nuit genshin.png';
     }
-    img.src = `../img/${imageName}`;
+
+    document.body.style.backgroundImage = `url('${imageName}')`;
 </script>
 
 </html>
