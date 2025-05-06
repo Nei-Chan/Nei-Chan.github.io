@@ -50,7 +50,7 @@ pour aujoud-hui nous avons préparé le contenu de chaque page, nous allons fair
 
  <script>
     const hour = new Date().getHours();
-    const img = document.getElementById('carte-img');
+    const img = document.Portesoir);
     if (hour >= 6 && hour < 12) {
         imageName = 'Portejour.png';
     } else if (hour >= 12 && hour < 18) {
@@ -58,7 +58,7 @@ pour aujoud-hui nous avons préparé le contenu de chaque page, nous allons fair
     } else if (hour >= 18 && hour < 22) {
         imageName = 'Porte nuit genshin.png';
     } else {
-        imageName = 'Portesoir.png';
+        imageName = 'Portejour.png';
     }
     img.src = `../img/${imageName}`;
 </script>
