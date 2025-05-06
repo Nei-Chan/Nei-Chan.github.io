@@ -3,6 +3,25 @@
   
 <style>
   body {
+    
+    <script>
+    // Вытаскиваем текущий час
+    const hour = new Date().getHours();
+    // Достаем по id нужный html тег
+    const img = document.getElementById('carte-img');
+    // Меняем картинку в зависимости от часа
+    if (hour >= 6 && hour < 12) {
+        imageName = 'Portejour.png';
+    } else if (hour >= 12 && hour < 18) {
+        imageName = 'Portesoir.png';
+    } else if (hour >= 18 && hour < 22) {
+        imageName = 'Porte nuit genshin.png';
+    } else {
+        imageName = 'Portesoir.png';
+    }
+    // Устанавливаем картинку
+    img.src = `../img/${imageName}`;
+</script>
   
     color: purple;
     font-family: 'UnifrakturCook', cursive;
