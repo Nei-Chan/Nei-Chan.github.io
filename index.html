@@ -49,11 +49,9 @@ pour aujoud-hui nous avons préparé le contenu de chaque page, nous allons fair
 
 
    <script>
-    // Вытаскиваем текущий час
+ 
     const hour = new Date().getHours();
-    // Достаем по id нужный html тег
     const img = document.getElementById('carte-img');
-    // Меняем картинку в зависимости от часа
     if (hour >= 6 && hour < 12) {
         imageName = 'Portejour.png';
     } else if (hour >= 12 && hour < 18) {
@@ -63,7 +61,6 @@ pour aujoud-hui nous avons préparé le contenu de chaque page, nous allons fair
     } else {
         imageName = 'Portesoir.png';
     }
-    // Устанавливаем картинку
     img.src = `../img/${imageName}`;
 </script>
 
