@@ -4,24 +4,7 @@
 <style>
   body {
     
-    <script>
-    // Вытаскиваем текущий час
-    const hour = new Date().getHours();
-    // Достаем по id нужный html тег
-    const img = document.getElementById('carte-img');
-    // Меняем картинку в зависимости от часа
-    if (hour >= 6 && hour < 12) {
-        imageName = 'Portejour.png';
-    } else if (hour >= 12 && hour < 18) {
-        imageName = 'Portesoir.png';
-    } else if (hour >= 18 && hour < 22) {
-        imageName = 'Porte nuit genshin.png';
-    } else {
-        imageName = 'Portesoir.png';
-    }
-    // Устанавливаем картинку
-    img.src = `../img/${imageName}`;
-</script>
+   
   
     color: purple;
     font-family: 'UnifrakturCook', cursive;
@@ -60,6 +43,29 @@ pour aujoud-hui nous avons préparé le contenu de chaque page, nous allons fair
     <li><a href="page2.html">Les Personnages</a></li>
     <li><a href="page3.html">Les visions</a></li>
   </ul>
+
+
+
+</body>
+ <script>
+    // Вытаскиваем текущий час
+    const hour = new Date().getHours();
+    // Достаем по id нужный html тег
+    const img = document.getElementById('carte-img');
+    // Меняем картинку в зависимости от часа
+    if (hour >= 6 && hour < 12) {
+        imageName = 'Portejour.png';
+    } else if (hour >= 12 && hour < 18) {
+        imageName = 'Portesoir.png';
+    } else if (hour >= 18 && hour < 22) {
+        imageName = 'Porte nuit genshin.png';
+    } else {
+        imageName = 'Portesoir.png';
+    }
+    // Устанавливаем картинку
+    img.src = `../img/${imageName}`;
+</script>
+  
 </body>
 
 </html>
