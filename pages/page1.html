@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Les Regions</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<h1>Les Regions</h1>
+<p>Informations sur les établissements...</p>
+<img id="carte-img" src="../img/carte1.png" alt="" width="500" height="300">
+<ul>
+    <li><a href="page4.html">Mondtscntadt</a></li>
+    <li><a href="page5.html">Fontaine</a></li>
+    <li><a href="Inazuma.html">Inazuma</a></li>
+
+</ul>
+
+<ul>
+    <li><a href="page2.html">Les Personnages</a></li>
+    <li><a href="page3.html">Les visions</a></li>
+</ul>
+<!--Для видео, если видео будет не с ютуба то в src путь указать к файлу как с картинками, ширину и высоту любые можно укзаать-->
+<iframe width="550" height="350"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+
+</body>
+<script>
+    // Вытаскиваем текущий час
+    const hour = new Date().getHours();
+    // Достаем по id нужный html тег
+    const img = document.getElementById('carte-img');
+    // Меняем картинку в зависимости от часа
+    if (hour >= 6 && hour < 12) {
+        imageName = 'map-genshin.pn.png';
+    } else if (hour >= 12 && hour < 18) {
+        imageName = 'map3.jpeg';
+    } else if (hour >= 18 && hour < 22) {
+        imageName = 'map3.png';
+    } else {
+        imageName = 'carte1.png';
+    }
+    // Устанавливаем картинку
+    img.src = `../img/${imageName}`;
+</script>
+</html>

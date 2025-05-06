@@ -1,42 +1,57 @@
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">/* Styles for Parcoursup theme */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+/* Styles for Parcoursup theme */
 
 body {
-  font-family: 'UnifrakturCook', cursive;
+    font-family: 'UnifrakturCook', cursive;
+    width: 100%;
+    height: 100vh;
+    /* 45deg - угол градиента (по умолчанию 90), дальше через запятую сколько нужно цветов указать */
+    background: linear-gradient(45deg, purple, mediumpurple, pink);
+    /* Добавил тобы не было разрыва между градиентами */
+    background-attachment: fixed;
+}
+
+/* Стили для body с классом venti-page (класс указали в Venti.html) */
+body.venti-page {
+    background-image: none;
+    background-color: turquoise;
+    color: lightgreen;
+    font-family: 'UnifrakturCook', cursive;
 }
 
 h1 {
-  color: #333;
+    color: #333;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 li {
-  padding: 5px 0;
+    padding: 5px 0;
 }
 
 form {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="email"] {
-  width: 200px;
-  padding: 5px;
-  margin-bottom: 10px;
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 input[type="submit"] {
-  padding: 5px 10px;
-  background-color: #58a0d3;
-  color: white;
-  border: none;
-  cursor: pointer;
+    padding: 5px 10px;
+    background-color: #58a0d3;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
