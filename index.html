@@ -44,13 +44,17 @@ pour aujoud-hui nous avons préparé le contenu de chaque page, nous allons fair
     <li><a href="page2.html">Les Personnages</a></li>
     <li><a href="page3.html">Les visions</a></li>
   </ul>
+  
+ <img id='idimg' src=Portesoir.jpg">
+ <img id='idimg' src=Portejour.jpg">
+ <img id='idimg' src=Porte nuit genshinr.jpg">
 
 </body>
 
 
  <script>
     const hour = new Date().getHours();
-    const img = document.AAAA('Portesoir.png');
+    const img = document.getElementById('idimg');
     if (hour >= 6 && hour < 12) {
         imageName = 'Portejour.png';
     } else if (hour >= 12 && hour < 18) {
