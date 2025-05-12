@@ -17,6 +17,14 @@ a:hover {
   text-shadow: 0 0 10px lightblue;
   }
 
+      .conteneur {
+      display: flex;
+      justify-content: flex-end; /* Aligne l'image à droite */
+      align-items: center; /* Centrer verticalement */
+      width: 100%;
+    }
+
+
   .cadre-texte {
       border: 3px solid #03045e;
       background-color: #bde0fe;
@@ -49,7 +57,8 @@ a:hover {
 </head>
 
 <body>
-  
+    
+   <div class="conteneur">
   <div class="cadre-texte">
   <h1>Furina</h1>
   <p>
@@ -58,8 +67,10 @@ a:hover {
   </div>
   
   <div class="cadre-image">
-  <img src="FURINA.png" alt="Furina">
+ <img src="FURINA.png" alt="Furina" style="width: 50%; height: auto;">
   </div>
+  </div>
+     
   
   <ul>
     <li><a href="page1.html">Les regions</a></li>
