@@ -3,6 +3,19 @@
 
 <style>
 
+    .etoiles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('etoiles.png') repeat;
+  animation: moveStars 100s linear infinite;
+  z-index: -1;
+}
+  
+        @keyframes moveStars {
+  from {background-position: 0 0;}
+  to {background-position: -10000px 10000px;}
+}
     h1, h2, h3 {
         background-color: darkmagenta;
         text-shadow: 1px 1px 3px black;
@@ -10,10 +23,9 @@
         color: red;
         font-family: 'Yuji Hentaigana Akari', serif;
     }
-
-
+}
     body {
-        background-color: purple;
+        background-color: radial-gradient( #1a1a40, #0d0d1a);
         font-family: 'Yuji Hentaigana Akari', serif;
         text-shadow: 1px 1px 3px black;
         color: mediumpurple;
@@ -27,6 +39,7 @@
             color: lightblue;
             text-shadow: 0 0 10px blue;
         }
+      
     }
 
 </style>
