@@ -14,6 +14,20 @@
   background-color: black;
   color: red;
   font-family: 'UnifrakturCook', cursive;
+   
+    .etoiles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('etoiles.png') repeat;
+  animation: moveStars 100s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 10000px; }
+}
   }   
 </style>
 
